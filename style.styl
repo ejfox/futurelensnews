@@ -1,0 +1,276 @@
+//accentColor1 = rgba(#5f99c9,1);
+accentColor1 = rgba(#1993BF ,1);
+html 
+  height 100%
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+  
+body
+  font-family "Helvetica Neue", Helvetica, Arial
+  font-size 100%
+  font-size 1.3em
+  line-height 1.5em
+  background-color #F1F1F1
+  padding 0
+  margin 0
+  
+h1,h2,h3,h4,h5,h6
+  font-family 'Open Sans', sans-serif
+  
+a:link
+  color black
+  font-weight bold
+  border-bottom 1px solid rgba(green,0.2)
+  text-decoration none
+  
+a:visited
+  color rgba(black, 0.7)
+  border-bottom 1px dotted #CCC
+  
+.timestamp
+  opacity 0.4
+
+h1
+  font-size 2em
+  //text-align center
+  margin-left 2em
+  
+h2 
+  margin-bottom 0
+  
+h4
+  font-size 1.2em
+  line-height 1.4em
+  
+hr
+  border 0
+  height 3em
+
+header
+  z-index 9999
+  width 100%
+  line-height 1em
+  background-color accentColor1
+  color white
+  border-bottom 1px solid #ccc
+  border-top 1px solid white
+  position fixed
+  top 0
+  height 2.5em
+  
+  box-shadow 0 1px 0.5em 0 rgba(black, 0.16)
+  
+  text-align center
+  
+  path
+    fill white !important
+  
+  h1
+    margin-left 0.5em
+    margin-top 0.35em
+    font-size: 1.3em
+    line-height 1.2em
+    
+    svg
+      display inline-block
+      vertical-align bottom
+    
+footer
+  padding 1em
+  font-size 0.8em
+  line-height 1.5em
+  border-top 1px solid black
+  text-align center
+  background-color white
+  margin-top 3em
+  
+  opacity 0.3
+  
+  p
+    max-width 800px
+    margin 0 auto
+
+#container
+  width 80%
+  max-width 800px
+  margin-left auto
+  margin-right auto
+  margin-top 70px
+  padding: 1em
+  
+#article-container
+  //margin-top 100px
+  
+  #feature-image
+    height 500px
+    width 100%
+    background-color #73d1ce 
+    
+    h1
+      text-align center
+      font-size 4em
+      color white
+      padding-top: 2.2em
+      margin 0
+  
+  p
+    width 80%
+    max-width 800px
+    margin-left 4em
+  h2,h3,h4,h5,h6
+    margin-left 4em
+  
+#article-list
+  width 100%
+  padding 0
+  margin 0
+  
+  li
+    display inline-block
+    //margin 2px
+    background-color #CCC
+    //border 1px solid #999
+    list-style-type none
+    padding 0
+    border 1px solid #E6E6E6
+    //margin-bottom 0.2em
+    border-radius 3px
+    opacity 0.9
+    
+
+    -webkit-transition: all 400ms cubic-bezier(1.000, 0, 0.350, 0.605); /* older webkit */
+    -webkit-transition: all 400ms cubic-bezier(1.000, -0.100, 0.350, 0.605); 
+    -moz-transition: all 400ms cubic-bezier(1.000, -0.100, 0.350, 0.605); 
+    -ms-transition: all 400ms cubic-bezier(1.000, -0.100, 0.350, 0.605); 
+    -o-transition: all 400ms cubic-bezier(1.000, -0.100, 0.350, 0.605); 
+    transition: all 400ms cubic-bezier(1.000, -0.100, 0.350, 0.605); /* custom */
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+    background-position center center
+    background-repeat no-repeat
+    
+    
+    
+    &:hover          
+      opacity 1      
+      h2
+        background-color rgba(black, 0.3)
+        
+      &.breaking
+        h2
+          background-color rgba(accentColor1, 0.75)
+    
+    h2
+      text-align center
+      color white
+      text-shadow 0 1px 1px rgba(black, 0.9)
+      padding 0.4em 0.8em
+      line-height 1.3em
+      background-color rgba(black, 0.2)
+      height auto
+
+      -webkit-transition: all 350ms cubic-bezier(1.000, 0.040, 0.250, 0.725); 
+      -moz-transition: all 350ms cubic-bezier(1.000, 0.040, 0.250, 0.725); 
+      -ms-transition: all 350ms cubic-bezier(1.000, 0.040, 0.250, 0.725); 
+      -o-transition: all 350ms cubic-bezier(1.000, 0.040, 0.250, 0.725); 
+      transition: all 350ms cubic-bezier(1.000, 0.040, 0.250, 0.725); /* custom */
+      
+    .timestamp
+      font-weight 300
+      position absolute
+      bottom 2px
+      left 2px
+      font-size 0.7em
+      line-height 1em
+      margin 0
+      padding 0.4em
+      width auto
+      border-radius 0.25em
+      color rgba(white, 0.5)
+      text-shadow 0 1px 1px rgba(black, 0.8)
+      //background-color rgba(white, 0.4)
+      border-bottom 1px solid rgba(black, 0.3)
+      
+      
+    &.breaking
+      border-top 1px solid rgba(accentColor1, 0.4)
+      border-bottom 1px solid rgba(accentColor1, 0.4)
+      h2
+        background-color rgba(accentColor1, 0.8)
+        color white
+    
+    &.width-full
+      width 100%
+      height 400px
+      
+
+    
+    &.width-half
+      width 50%
+      height 300px
+      
+    &.width-quarter
+      width 24%
+      height 175px
+      
+      
+#latest-updates
+  padding 0
+  font-size 0.9em
+  font-family 'Open Sans', sans-serif
+  font-weight 700
+  a:link
+    font-weight 800
+
+  .update
+    
+    color accentColor1
+    opacity 0.5  
+    a:link
+      color accentColor1
+    a:hover
+      color rgba(accentColor1, 0.7)
+    a:visited
+      color #ccc
+  
+  
+  .newstory
+    a:link
+      color #999
+    a:hover
+      color rgba(#999, 0.9)
+      
+    a:visited
+      opacity 0.9
+      color rgba(#999, 0.8)
+
+  li
+    list-style-type none
+    margin 0
+    padding 0.5em
+    padding-left 0
+    border-bottom 1px solid accentColor1
+    cursor default
+    text-shadow 0 1px 1px white
+    
+    
+    opacity 0.9
+    
+    &:hover
+      //opacity: 1
+      
+      
+#article
+  padding-bottom 4em
+  header
+    h1
+      text-align left
