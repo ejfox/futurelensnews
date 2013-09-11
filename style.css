@@ -15,6 +15,23 @@ body {
   padding: 0;
   margin: 0;
 }
+@media only screen and (max-width : 1023px) {
+  body {
+    font-size: 1.2em;
+  }
+  header svg {
+    height: 1em;
+  }
+}
+@media only screen and (max-width : 767px) {
+  body {
+    font-size: 1em;
+    line-height: 1.6em;
+  }
+  header svg {
+    height: 1em;
+  }
+}
 h1,
 h2,
 h3,
@@ -68,6 +85,13 @@ header {
 header path {
   fill: #fff !important;
 }
+header a:link,
+header a:hover,
+header a:visited {
+  color: #fff !important;
+  text-decoration: none;
+  border-bottom: 0;
+}
 header h1 {
   margin-left: 0.5em;
   margin-top: 0.35em;
@@ -100,29 +124,89 @@ footer p {
   margin-top: 70px;
   padding: 1em;
 }
+#article-container .tldr {
+  color: rgba(0,0,0,0.6);
+}
+#article-container .tldr a:link,
+#article-container .tldr a:hover,
+#article-container .tldr a:visited {
+  font-weight: 400;
+  border-bottom: 1px dotted rgba(153,153,153,0.5);
+}
+#article-container .tldr strong {
+  color: #000;
+}
+#article-container .tldr strong a:link,
+#article-container .tldr strong a:hover {
+  font-weight: 700;
+}
+#article-container aside {
+  position: absolute;
+  right: 3rem;
+  width: 28%;
+  margin-top: 22px;
+}
+#article-container aside h2 {
+  margin: 0;
+  margin-bottom: 0.25em;
+}
 #article-container #feature-image {
-  height: 500px;
+  min-height: 500px;
   width: 100%;
-  background-color: #73d1ce;
+  background-color: #ccc;
+  background-position: bottom center;
+  background-attachment: fixed;
+  border-bottom: 0.2em solid rgba(0,0,0,0.7);
 }
 #article-container #feature-image h1 {
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   color: #fff;
   padding-top: 2.2em;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 80%;
+  line-height: 1.2em;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.75);
 }
 #article-container p {
-  width: 80%;
+  width: 60%;
   max-width: 800px;
-  margin-left: 4em;
+  margin-left: 3rem;
 }
 #article-container h2,
 #article-container h3,
 #article-container h4,
 #article-container h5,
 #article-container h6 {
-  margin-left: 4em;
+  margin-left: 3rem;
+}
+#more-details {
+  width: 60%;
+  max-width: 960px;
+  margin: 4em auto;
+}
+@media only screen and (max-width : 1024px) {
+  #article-container aside {
+    position: static;
+    width: auto;
+  }
+  #article-container aside h2 {
+    margin: 0.5em 3rem;
+    padding: 0;
+  }
+}
+@media only screen and (max-width : 767px) {
+  #article-container p {
+    width: 90%;
+    margin: 1.5em 1em;
+  }
+  #article-container h2,
+  #article-container h3,
+  #article-container h4,
+  #article-container aside h2 {
+    margin: 0.5em 1em;
+    padding: 0;
+  }
 }
 #article-list {
   width: 100%;
@@ -181,7 +265,7 @@ footer p {
   position: absolute;
   bottom: 2px;
   left: 2px;
-  font-size: 0.7em;
+  font-size: 0.5em;
   line-height: 1em;
   margin: 0;
   padding: 0.4em;
@@ -190,6 +274,17 @@ footer p {
   color: rgba(255,255,255,0.5);
   text-shadow: 0 1px 1px rgba(0,0,0,0.8);
   border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+#article-list li .photo-credit {
+  font-weight: 300;
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  font-size: 0.5em;
+  color: rgba(255,255,255,0.3);
+  margin: 0;
+  padding: 0.6em;
+  line-height: 1em;
 }
 #article-list li.breaking {
   border-top: 1px solid rgba(25,147,191,0.4);
@@ -258,4 +353,21 @@ footer p {
 }
 #article header h1 {
   text-align: left;
+}
+/* YouTube Video Stretch */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

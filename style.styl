@@ -19,6 +19,23 @@ body
   padding 0
   margin 0
   
+@media only screen and (max-width : 1023px)
+    body
+      font-size 1.2em
+      
+    header
+       svg
+         height 1em
+         
+@media only screen and (max-width : 767px)
+   body
+     font-size 1em
+     line-height 1.6em
+
+   header
+      svg
+        height 1em
+
 h1,h2,h3,h4,h5,h6
   font-family 'Open Sans', sans-serif
   
@@ -67,14 +84,22 @@ header
   
   text-align center
   
+
+  
   path
     fill white !important
+  
+  a:link,a:hover,a:visited
+    color white !important
+    text-decoration none
+    border-bottom 0
   
   h1
     margin-left 0.5em
     margin-top 0.35em
     font-size: 1.3em
     line-height 1.2em
+  
     
     svg
       display inline-block
@@ -103,27 +128,84 @@ footer
   margin-top 70px
   padding: 1em
   
+articleMargins = 3rem  
 #article-container
   //margin-top 100px
   
+  .tldr
+    a:link,a:hover,a:visited
+      font-weight 400
+      border-bottom: 1px dotted rgba(#999, 0.5)
+      
+    color rgba(black, 0.6)
+    
+    strong
+      color black
+      
+      a:link,a:hover
+        font-weight 700
+  
+  aside
+    position absolute
+    right articleMargins
+    //max-width 30%
+    width 28%
+    margin-top 22px
+    
+    h2
+      margin 0
+      margin-bottom 0.25em
+  
   #feature-image
-    height 500px
+    min-height 500px
     width 100%
-    background-color #73d1ce 
+    background-color #CCC
+    background-position bottom center
+    background-attachment fixed
+    border-bottom 0.2em solid rgba(black,0.7)
     
     h1
       text-align center
-      font-size 4em
+      font-size 3em
       color white
       padding-top: 2.2em
-      margin 0
+      margin 0 auto
+      max-width 80%
+      line-height 1.2em
+      text-shadow 0 2px 4px rgba(black, 0.75)
   
   p
-    width 80%
+    width 60%
     max-width 800px
-    margin-left 4em
+    margin-left articleMargins
   h2,h3,h4,h5,h6
-    margin-left 4em
+    margin-left articleMargins
+    
+#more-details
+  width 60%
+  max-width 960px
+  margin 4em auto
+    
+@media only screen and (max-width : 1024px)
+  #article-container
+    aside
+      position static
+      width auto
+      
+      h2
+        margin 0.5em articleMargins
+        padding 0
+        
+        
+@media only screen and (max-width : 767px)
+  #article-container
+    p
+      width 90%
+      margin 1.5em 1em
+      
+    h2, h3, h4, aside h2
+      margin 0.5em 1em
+      padding 0
   
 #article-list
   width 100%
@@ -189,7 +271,7 @@ footer
       position absolute
       bottom 2px
       left 2px
-      font-size 0.7em
+      font-size 0.5em
       line-height 1em
       margin 0
       padding 0.4em
@@ -199,6 +281,17 @@ footer
       text-shadow 0 1px 1px rgba(black, 0.8)
       //background-color rgba(white, 0.4)
       border-bottom 1px solid rgba(black, 0.3)
+      
+    .photo-credit
+      font-weight 300
+      position absolute
+      bottom 2px
+      right 2px
+      font-size 0.5em
+      color rgba(white, 0.3)
+      margin 0
+      padding 0.6em
+      line-height 1em
       
       
     &.breaking
@@ -274,3 +367,23 @@ footer
   header
     h1
       text-align left
+      
+      
+      
+      
+/* YouTube Video Stretch */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}      
