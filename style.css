@@ -150,6 +150,10 @@ footer p {
   margin: 0;
   margin-bottom: 0.25em;
 }
+#article-container aside img {
+  width: 100%;
+  height: auto;
+}
 #article-container #feature-image {
   min-height: 500px;
   width: 100%;
@@ -181,14 +185,18 @@ footer p {
   margin-left: 3rem;
 }
 #more-details {
+  border-top: 1px dotted #999;
+  display: block;
   width: 60%;
-  max-width: 960px;
-  margin: 4em auto;
+}
+#more-details li {
+  margin: 0.75em 0;
 }
 @media only screen and (max-width : 1024px) {
   #article-container aside {
     position: static;
     width: auto;
+    margin-left: 3rem;
   }
   #article-container aside h2 {
     margin: 0.5em 3rem;
